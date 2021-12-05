@@ -2,6 +2,8 @@ from bin_packing import best_fit
 from bin_packing import first_fit
 from bin_packing import next_fit
 from bin_packing import harmonic
+from list_access import move_to_front
+from list_access import bit
 
 
 if __name__ == "__main__":
@@ -15,3 +17,11 @@ if __name__ == "__main__":
     used_bins = best_fit.solve(items)
     print()
     used_bins = harmonic.solve(items, k=5)
+
+    starting_list = [1, 2, 3, 4, 5]
+    queries = [4, 2, 3, 2, 1, 4, 2, 5]
+    move_to_front.solve(starting_list, queries)
+    print()
+
+    starting_bits = [0, 1, 1, 0, 0]
+    bit.solve(starting_list, starting_bits, queries)
