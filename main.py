@@ -6,6 +6,8 @@ from list_access import move_to_front
 from list_access import bit
 from scheduling.time_model import lpt
 from scheduling.time_model import intv_lpt
+from k_server import double_coverage
+from k_server import lazy_double_coverage
 
 
 if __name__ == "__main__":
@@ -33,3 +35,9 @@ if __name__ == "__main__":
     print()
     intv_lpt.solve(3, jobs)
     print()
+
+    starting_config = [1, 4, 10]
+    queries = [6, 9, 0, 3, 7]
+    double_coverage.solve(starting_config, queries)
+    print()
+    lazy_double_coverage.solve(starting_config, queries)
