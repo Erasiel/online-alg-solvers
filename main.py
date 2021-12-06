@@ -2,6 +2,7 @@ from bin_packing import *
 from list_access import *
 from scheduling.time_model import *
 from k_server import *
+from strip_packing import *
 
 
 if __name__ == "__main__":
@@ -41,3 +42,9 @@ if __name__ == "__main__":
     double_coverage.solve(starting_config, queries)
     print()
     lazy_double_coverage.solve(starting_config, queries)
+    print()
+
+    # Example for strip packing
+    strips = [(0.4, 0.6), (0.3, 0.3), (0.5, 0.4), (0.1, 0.7), (0.7, 0.1), (0.3, 0.3)]
+    next_fit_shelf.solve(0.5, strips)
+    print()
