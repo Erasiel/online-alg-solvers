@@ -51,4 +51,3 @@ def solve(n_machines: int, jobs: List[Tuple[int, int]]):
     for idx, machine in enumerate(machines):
         print(f"Machine #{idx + 1}: {machine}")
     print(f"Makespan: {makespan}")
-    print()
